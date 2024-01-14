@@ -7,4 +7,6 @@
 
 ## Cara pilih branch
 1. Pada VS Code kalian, klik tombol dibawah disebelah kiri bawah
+<img src="screenshot/ss1.png" width="250">
 2. Pilih branch sesuai kelompok kalian
+<img src="screenshot/ss2.png" width="400">
