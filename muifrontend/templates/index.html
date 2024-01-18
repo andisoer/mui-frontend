@@ -74,7 +74,7 @@
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#services">Profile</a></li>
           <li><a class="nav-link" href="#portfolio">Berita</a></li>
-          <li><a class="nav-link" href="#about">Gallery</a></li>
+          <li><a class="nav-link {% if request.path == '/galeri' %} active {% endif %}" href="/galeri">Gallery</a></li>
           <li><a class="nav-link" href="#services">Konsultasi</a></li>
           <li><a class="nav-link" href="#portfolio">Sejarah</a></li>
           <li><a class="nav-link {% if request.path == '/fatwa-tausiyah' %} active {% endif %}" href="/fatwa-tausiyah">Fatwa & Tausiyah</a></li>
@@ -105,6 +105,9 @@
   </header><!-- End Header -->
 
   {% block home %}
+  {% endblock %}
+
+  {% block galeri %}
   {% endblock %}
 
   {% block fatwa-tausiyah %}
