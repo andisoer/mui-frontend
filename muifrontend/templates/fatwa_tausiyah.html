@@ -3,6 +3,53 @@
 {% load static %}
 
 {% block fatwa-tausiyah %}
+    <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
 
 <div> Halaman Fatwa Tausiyah</div>
+
+<table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>No fatwah</th>
+            <th>Nama</th>
+            <th>Baca atau unduh</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>No fatwah</th>
+            <th>Nama</th>
+            <th>Baca atau unduh</th>
+        </tr>
+    </tfoot>
+</table>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#example').DataTable({
+                ajax:{
+                    url: 'http://127.0.0.1:8001/fatwa/',
+                    dataSrc:'',
+                },
+                columns: [
+                    {data:'no_fatwa'},
+                    {data:'title'},
+                    {
+                // Column for the "Show" button
+                data: null,
+                render: function (data, type, row) {
+                    // Assuming the ID is stored in the 'id' property of the row
+                    return '<a href="' + row.lampiran_fatwa + '" target ="_blank" class="btn btn-primary">Show</a>';
+                }
+            },
+                ]
+            })
+        })
+    </script>
+    
+    
 {% endblock %}
