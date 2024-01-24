@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block home %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card mt-5 align-items-center">
+                <div style="margin-top:12px; width: 100PX; height: 22PX; padding: 10px; background: #0E7346; border-radius: 20px; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+                    <div class="tag-konsultasi" style="color: white; font-weight: 300; font-size: 12px; letter-spacing: 2px;">LAYANAN</div>
+                </div>
+                <div class="judul-cd" style="font-weight: bold;">Konsultasi</div>
+                <div class="card-body" style="margin: 20px 20px 20px 20px;">
+                    <p style="text-align: center;">Bagi Pembaca yang ingin bertanya seputar agama kepada MUI Kabupaten 
+                        Bengkalis, silahkan isi form pertanyaan dibawah ini</p>
+                    <p style="text-align: center;">Pertanyaan yang mengandung insur SARA, hoax, pornografi, spam, atau ujaran kebencian tidak akan kami layani</p>
+                    <div class="container mx-auto">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form id="tambah_dt" class="pt-4 align-items-center">
+                                    <div class="col-12 mb-3">
+                                        <input id="nama" class="form-control" type="text" placeholder="Nama" aria-label="default input example">
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <input id="email" class="form-control" type="text" placeholder="Email" aria-label="default input example">
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <input id="telp" class="form-control" type="text" placeholder="No Hp" aria-label="default input example">
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <select id="topik" class="form-select" aria-label="Pilih topik">
+                                            <option selected="">Pilih Topik</option>
+                                            <option value="Akhlak">Akhlak</option>
+                                            <option value="Aqidah">Aqidah</option>
+                                            <option value="Ibadah">Ibadah</option>
+                                            <option value="Muamalah">Muamalah</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <textarea id="pesan" class="form-control" id="validationTextarea" placeholder="Required example textarea" required=""></textarea>
+                                        <div class="invalid-feedback">
+                                            Please enter a message in the textarea.
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-success" style="width: 100%; height: auto;">Kirim Konsultasi</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

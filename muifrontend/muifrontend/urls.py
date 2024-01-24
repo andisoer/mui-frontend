@@ -32,8 +32,16 @@ def fatwaTausiyah(request) :
     }
     return render(request, 'fatwa_tausiyah.html', konteks)
 
+def kosultasi(request) :
+    title = "Konsultasi"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'konsultasi.html', konteks)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('fatwa-tausiyah', fatwaTausiyah),
+    path('konsultasi', kosultasi),
 ]
