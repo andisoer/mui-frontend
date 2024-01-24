@@ -3,83 +3,38 @@
 {% load static %}
 
 {% block galeri %}
-<section id="portfolio" class="portfolio">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header">
-      <h2>Our Gallery</h2>
-      <p>Berikut adalah beberapa dokumentasi dari kegiatan kami :</p>
+<!-- Blog Start -->
+<div class="container-fluid py-5">
+  <div class="container">
+    <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+        <h1 class="text-primary mb-6">Gallery</h1>
+        <p class="mb-5">disini adalah dokumentasi dari seluruh kegiatan MUI Batu</p>
     </div>
-
-    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-      <!-- Card Tour-->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <img src="static/img/portfolio/mui/2.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Wisuda Santri TK/TPA Angkatan VI</h4>
-          <a href="static/img/portfolio/mui/foto1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bi bi-arrow-right-circle-fill"></i></a>
-          </a>
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4 wow fadeIn" >
+            <div class="blog-item border h-100 p-4">
+                <img class="img-fluid mb-4" src="{% static 'img/portfolio/mui/2.jpg' %}" alt="">
+                <h5 href="" class="h5 lh-base d-inline-block">Foods that are good for your hair growing</h5>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat.</p>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <img src="static/img/portfolio/mui/3.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Dakwah</h4>
-          <p>Dakwah</p>
-          <a href="static/img/portfolio/mui/foto2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bi bi-arrow-right-circle-fill"></i></a>
-          </a>
+        <div class="col-md-6 col-lg-4 wow fadeIn">
+            <div class="blog-item border h-100 p-4">
+                <img class="img-fluid mb-4" src="{% static 'img/portfolio/mui/3.jpg' %}" alt="">
+                <h5 href="" class="h5 lh-base d-inline-block">How to take care of hair naturally</h5>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat.</p>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <img src="static/img/portfolio/mui/4.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Dakwah</h4>
-          <p>Dakwah</p>
-          <a href="static/img/portfolio/mui/foto3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bi bi-arrow-right-circle-fill"></i></a>
-          </a>
+        <div class="col-md-6 col-lg-4 wow fadeIn">
+            <div class="blog-item border h-100 p-4">
+                <img class="img-fluid mb-4" src="{% static 'img/portfolio/mui/4.jpg' %}" alt="">
+                <h5 href="" class="h5 lh-base d-inline-block">How to use our natural & organic shampoo</h5>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat.</p>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <img src="static/img/portfolio/mui/images1.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Dakwah</h4>
-          <p>Dakwah</p>
-          <a href="static/img/portfolio/mui/foto4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 4"><i class="bi bi-arrow-right-circle-fill"></i></a>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <img src="static/img/portfolio/mui/images2.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Dakwah</h4>
-          <p>Dakwah</p>
-          <a href="static/img/portfolio/mui/foto5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 5"><i class="bi bi-arrow-right-circle-fill"></i></a>
-          </a>
-        </div>
-      </div>
-      <!-- end Card Tour -->
-
-      <!-- event -->
-      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <img src="static/img/portfolio/random/images3.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Random</h4>
-          <p>Random</p>
-          <a href="static/img/portfolio/random/foto7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bi bi-arrow-right-circle-fill"></i></a>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-        <img src="static/img/portfolio/random/mui7.jpg" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Random</h4>
-          <p>Random</p>
-          <a href="static/img/portfolio/random/bg2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bi bi-arrow-right-circle-fill"></i></a>
-          </a>
-        </div>
-      </div>
-      <!-- end event -->
-      </div>
     </div>
-  </section>
+  </div>
+</div>
+<!-- Blog End -->
 
 {% endblock %}
