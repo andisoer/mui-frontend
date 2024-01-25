@@ -43,5 +43,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('fatwa-tausiyah', fatwaTausiyah),
-    path('konsultasi', kosultasi),
+    path('konsultasii', kosultasi),
 ]

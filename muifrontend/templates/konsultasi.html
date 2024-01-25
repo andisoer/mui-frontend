@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block home %}
+{% block konsultasi %}
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
@@ -20,13 +20,13 @@
                             <div class="col-md-12">
                                 <form id="tambah_dt" class="pt-4 align-items-center">
                                     <div class="col-12 mb-3">
-                                        <input id="nama" class="form-control" type="text" placeholder="Nama" aria-label="default input example">
+                                        <input id="nama" class="form-control" type="text" placeholder="Masukkan nama anda" aria-label="default input example">
                                     </div>
                                     <div class="col-lg-12 mb-3">
-                                        <input id="email" class="form-control" type="text" placeholder="Email" aria-label="default input example">
+                                        <input id="email" class="form-control" type="text" placeholder="Masukkan Email anda" aria-label="default input example">
                                     </div>
                                     <div class="col-lg-12 mb-3">
-                                        <input id="telp" class="form-control" type="text" placeholder="No Hp" aria-label="default input example">
+                                        <input id="telp" class="form-control" type="text" placeholder="Masukkan nomor telepon tanpa menggunakan 0/62 langsung angka setelahnya" aria-label="default input example">
                                     </div>
                                     <div class="col-lg-12 mb-3">
                                         <select id="topik" class="form-select" aria-label="Pilih topik">
@@ -38,9 +38,9 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-12 mb-3">
-                                        <textarea id="pesan" class="form-control" id="validationTextarea" placeholder="Required example textarea" required=""></textarea>
+                                        <textarea id="pesan" class="form-control" id="validationTextarea" placeholder="Ajukan pertanyaan" required=""></textarea>
                                         <div class="invalid-feedback">
-                                            Please enter a message in the textarea.
+                                            Tanyakan saja jangan malu-malu :)
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-success" style="width: 100%; height: auto;">Kirim Konsultasi</button>

@@ -6,14 +6,14 @@ document.getElementById('tambah_dt').addEventListener('submit', function(e) {e.p
     const telp = document.getElementById('telp').value;
     const topik = document.getElementById('topik').options[document.getElementById('topik').selectedIndex].value;
     const pesan = document.getElementById('pesan').value;
-    const token = localStorage.getItem('accessToken');
+    // const token = localStorage.getItem('accessToken');
 
     fetch('http://127.0.0.2:8000/apia/konsultasi/',{
         method: 'POST',
         headers: 
             {
                 'Content-Type' : 'application/json',
-                'Authorization': `Bearer ${token}`
+                // 'Authorization': `Bearer ${token}`
             },
         body: JSON.stringify({ 
             nama: nama,
