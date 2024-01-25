@@ -3,95 +3,104 @@
 {% load static %}
 
 {% block fatwa-tausiyah %}
-    <link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet"/>
+<link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet" />
 
-    <style>
-        #example-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+<style>
+    #example-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 
-        #example {
-            width: 90%;
-            margin: 0 auto;
-        }
+    #example {
+        width: 90%;
+        margin: 0 auto;
+    }
 
-        #page-heading {
-            font-size: 24px; /* Ukuran teks yang agak besar */
-            margin-bottom: 30px;
-            color: #09aa2c; /* Memberikan warna hijau */
-            font-weight: bold;
-        }
+    #page-heading {
+        font-size: 24px;
+        /* Ukuran teks yang agak besar */
+        margin-bottom: 30px;
+        color: #09aa2c;
+        /* Memberikan warna hijau */
+        font-weight: bold;
+    }
 
-        #example th,
-        #example td {
-            text-align: center;
-            padding: 10px;
-        }
+    #example th,
+    #example td {
+        text-align: center;
+        padding: 10px;
+    }
 
-        .show-button {
-            background-color: #09aa2c; /* Ganti warna latar belakang sesuai keinginan */
-            color: white; /* Ganti warna teks sesuai keinginan */
-            border: none;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 2px 2px;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s; /* Efek transisi perubahan warna */
-        }
+    .show-button {
+        background-color: #09aa2c;
+        /* Ganti warna latar belakang sesuai keinginan */
+        color: white;
+        /* Ganti warna teks sesuai keinginan */
+        border: none;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 2px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+        /* Efek transisi perubahan warna */
+    }
 
-        .show-button:hover {
-            background-color: #007aff;
-            color: white; /* Warna yang diubah ketika kursor hover */
-        }
-
-    </style>
-    <div class="container"><div class="row"><div class="col-md-12">
-    <div id="example-container">
-        <div id="page-heading">Fatwa dan Tausiyah</div>
-        <table id="example" class="display">
-            <thead>
-                <tr>
-                    <th>No Fatwa</th>
-                    <th>Nama</th>
-                    <th>Tanggal</th>
-                    <th>Baca atau Unduh</th>
-                </tr>
-            </thead>
-        </table>
+    .show-button:hover {
+        background-color: #007aff;
+        color: white;
+        /* Warna yang diubah ketika kursor hover */
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="example-container">
+                <div id="page-heading">Fatwa dan Tausiyah</div>
+                <table id="example" class="display">
+                    <thead>
+                        <tr>
+                            <th>No Fatwa</th>
+                            <th>Nama</th>
+                            <th>Tanggal</th>
+                            <th>Baca atau Unduh</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
     </div>
-</div></div></div>
+</div>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#example').DataTable({
-                ajax:{
-                    url: 'http://127.0.0.1:8000/fatwa/',
-                    dataSrc:'',
-                },
-                columns: [
-                    {data:'no_fatwa'},
-                    {data:'title'},
-                    {data:'date'},
-                    {
-                // Column for the "Show" button
-                data: null,
-                render: function (data, type, row) {
-                    // Assuming the ID is stored in the 'id' property of the row
-                    return '<a href="' + row.lampiran_fatwa + '" target="_blank" class="show-button">Baca</a>';
-                }
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+            ajax: {
+                url: 'http://127.0.0.1:8000/fatwa/',
+                dataSrc: '',
             },
-                ]
-                
-            })
+            columns: [
+                { data: 'no_fatwa' },
+                { data: 'title' },
+                { data: 'date' },
+                {
+                    // Column for the "Show" button
+                    data: null,
+                    render: function (data, type, row) {
+                        // Assuming the ID is stored in the 'id' property of the row
+                        return '<a href="' + row.lampiran_fatwa + '" target="_blank" class="show-button">Baca</a>';
+                    }
+                },
+            ]
+
         })
-    </script>
-    
-    
+    })
+</script>
+
+
 {% endblock %}
