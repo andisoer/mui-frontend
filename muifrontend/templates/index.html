@@ -80,7 +80,7 @@
           <li><a class="nav-link" href="#services">Profile</a></li>
           <li><a class="nav-link {% if request.path == '/berita' %} active {% endif %}" href="/berita">Berita</a></li>
           <li><a class="nav-link {% if request.path == '/galeri' %} active {% endif %}" href="/galeri">Gallery</a></li>
-          <li><a class="nav-link" href="#services">Konsultasi</a></li>
+          <li><a class="nav-link {% if request.path == '/konsultasii' %} active {% endif %}" href="/konsultasii">Konsultasi</a></li>
           <li><a class="nav-link" href="#portfolio">Sejarah</a></li>
           <li><a class="nav-link {% if request.path == '/fatwa-tausiyah' %} active {% endif %}" href="/fatwa-tausiyah">Fatwa & Tausiyah</a></li>
           <li><a class="nav-link scrollto" href="#team"></a></li>
@@ -112,6 +112,9 @@
   {% block home %}
   {% endblock %}
 
+  {% block konsultasi %}
+  {% endblock %}
+  
   {% block detail %}
   {% endblock %}
 
@@ -210,6 +213,8 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'js/main.js'%}"></script>
+  <!-- Link Custom JS -->
+  <script src="{% static 'js/tambah_dt.js'%}"></script>
   <script src="{% static 'js/Script.js'%}"></script>
 
 </body>

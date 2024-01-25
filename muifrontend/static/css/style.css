@@ -9,6 +9,22 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+/* Import Font Jost */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Style Konsultasi */
+.container .row .card .judul-cd{
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 6px;
+
+}
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
