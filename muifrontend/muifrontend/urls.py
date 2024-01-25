@@ -50,6 +50,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('fatwa-tausiyah', fatwaTausiyah),
-    path('berita',berita),
+    path('berita/',berita),
     path('detail',detail),
 ]
