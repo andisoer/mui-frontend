@@ -30,6 +30,11 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css'%}" rel="stylesheet">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- CSS -->
+  <link href="{%static 'css/style.css'%}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: BizLand
@@ -73,8 +78,8 @@
           <li><a class="nav-link {% if request.path == '/' %} active {% endif %}" href="/">Home</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#services">Profile</a></li>
-          <li><a class="nav-link" href="#portfolio">Berita</a></li>
-          <li><a class="nav-link" href="#about">Gallery</a></li>
+          <li><a class="nav-link {% if request.path == '/berita' %} active {% endif %}" href="/berita">Berita</a></li>
+          <li><a class="nav-link {% if request.path == '/galeri' %} active {% endif %}" href="/galeri">Gallery</a></li>
           <li><a class="nav-link {% if request.path == '/konsultasii' %} active {% endif %}" href="/konsultasii">Konsultasi</a></li>
           <li><a class="nav-link" href="#portfolio">Sejarah</a></li>
           <li><a class="nav-link {% if request.path == '/fatwa-tausiyah' %} active {% endif %}" href="/fatwa-tausiyah">Fatwa & Tausiyah</a></li>
@@ -110,6 +115,15 @@
   {% block konsultasi %}
   {% endblock %}
   
+  {% block detail %}
+  {% endblock %}
+
+  {% block content %}
+  {% endblock %}
+
+  {% block galeri %}
+  {% endblock %}
+
   {% block fatwa-tausiyah %}
   {% endblock %}
 
@@ -201,6 +215,7 @@
   <script src="{% static 'js/main.js'%}"></script>
   <!-- Link Custom JS -->
   <script src="{% static 'js/tambah_dt.js'%}"></script>
+  <script src="{% static 'js/Script.js'%}"></script>
 
 </body>
 

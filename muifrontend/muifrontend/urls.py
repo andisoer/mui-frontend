@@ -25,6 +25,13 @@ def index(request) :
     }
     return render(request, 'home.html', konteks)
 
+def Galeri(request) :
+    title = "Galeri"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'galeri.html', konteks)
+
 def fatwaTausiyah(request) :
     title = "Fatwa & Tausiyah"
     konteks = {
@@ -38,10 +45,26 @@ def kosultasi(request) :
         'title': title,
     }
     return render(request, 'konsultasi.html', konteks)
+def berita(request) :
+    title = "Berita"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'berita.html', konteks)
+
+def detail(request) :
+    title = "Detail Berita"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'detail_berita.html', konteks)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    path('galeri', Galeri),
     path('fatwa-tausiyah', fatwaTausiyah),
     path('konsultasii', kosultasi),
+    path('berita/',berita),
+    path('detail',detail),
 ]
