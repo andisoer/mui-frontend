@@ -31,6 +31,10 @@
   <!-- Template Main CSS File -->
   <link href="{% static 'css/style.css'%}" rel="stylesheet">
 
+  <!-- CSS -->
+  <link href="{%static 'css/style.css'%}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
   <!-- =======================================================
   * Template Name: BizLand
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -73,7 +77,7 @@
           <li><a class="nav-link {% if request.path == '/' %} active {% endif %}" href="/">Home</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#services">Profile</a></li>
-          <li><a class="nav-link" href="#portfolio">Berita</a></li>
+          <li><a class="nav-link {% if request.path == '/berita' %} active {% endif %}" href="/berita">Berita</a></li>
           <li><a class="nav-link" href="#about">Gallery</a></li>
           <li><a class="nav-link" href="#services">Konsultasi</a></li>
           <li><a class="nav-link" href="#portfolio">Sejarah</a></li>
@@ -107,7 +111,10 @@
   {% block home %}
   {% endblock %}
 
-  {% block fatwa-tausiyah %}
+  {% block detail %}
+  {% endblock %}
+
+  {% block content %}
   {% endblock %}
 
   <!-- ======= Footer ======= -->
