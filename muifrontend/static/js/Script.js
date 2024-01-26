@@ -40,10 +40,4 @@ function displayItems(gallery){
         `;
         itemsContainer.appendChild(itemElement)
     });
-
-    document.querySelectorAll('.update-btn').forEach(button => {
-        button.addEventListener('click', function(){
-            openUpdateModal(this.getAttribute('data-id'));
-        });
-    });
 };
