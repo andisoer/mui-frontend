@@ -32,8 +32,18 @@ def fatwaTausiyah(request) :
     }
     return render(request, 'fatwa_tausiyah.html', konteks)
 
+def sejarah(request) :
+    title = "sejarah"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'sejarah.html', konteks)
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
     path('fatwa-tausiyah', fatwaTausiyah),
+    path('sejarah/', sejarah),
+
 ]
