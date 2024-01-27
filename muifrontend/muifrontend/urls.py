@@ -39,6 +39,13 @@ def fatwaTausiyah(request) :
     }
     return render(request, 'fatwa_tausiyah.html', konteks)
 
+def sejarah(request) :
+    title = "sejarah"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'sejarah.html', konteks)
+
 def kosultasi(request) :
     title = "Konsultasi"
     konteks = {
@@ -65,6 +72,7 @@ urlpatterns = [
     path('', index),
     path('galeri', Galeri),
     path('fatwa-tausiyah', fatwaTausiyah),
+    path('sejarah/', sejarah),
     path('konsultasi', kosultasi),
     path('berita',berita),
     path('detail',detail),
