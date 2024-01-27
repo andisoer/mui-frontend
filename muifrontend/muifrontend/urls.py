@@ -45,6 +45,7 @@ def kosultasi(request) :
         'title': title,
     }
     return render(request, 'konsultasi.html', konteks)
+
 def berita(request) :
     title = "Berita"
     konteks = {
@@ -64,7 +65,7 @@ urlpatterns = [
     path('', index),
     path('galeri', Galeri),
     path('fatwa-tausiyah', fatwaTausiyah),
-    path('konsultasii', kosultasi),
-    path('berita/',berita),
+    path('konsultasi', kosultasi),
+    path('berita',berita),
     path('detail',detail),
 ]
