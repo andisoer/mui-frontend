@@ -36,7 +36,7 @@ function displayHomeData(data) {
             <h2>${element.deskripsi}</h2>
             <div class="d-flex">
                 <a href="#about" class="btn-get-started scrollto">Tentang Kita</a>
-                <a href="${element.link_video}" class="glightbox btn-watch-video"><i
+                <a href="${element.link_video}" target="_blank" class="glightbox btn-watch-video"><i
                         class="bi bi-play-circle"></i><span>Sekilas MUI Batu</span></a>
             </div>
         `;
