@@ -72,7 +72,7 @@ urlpatterns = [
     path('', index),
     path('galeri', Galeri),
     path('fatwa-tausiyah', fatwaTausiyah),
-    path('sejarah/', sejarah),
+    path('sejarah', sejarah),
     path('konsultasi', kosultasi),
     path('berita',berita),
     path('detail',detail),
