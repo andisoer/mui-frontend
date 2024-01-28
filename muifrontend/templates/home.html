@@ -4,5 +4,12 @@
 
 {% block home %}
 
-<div> Halaman Home</div>
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container">
+        <img src="{% static 'img/logo_MUI.png'%}" alt="...">
+        <div id="home-list"></div>
+    </div>
+</section><!-- End Hero -->
+<script src="{% static 'js/api_home_user.js'%}"></script>
 {% endblock %}

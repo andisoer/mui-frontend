@@ -25,6 +25,13 @@ def index(request) :
     }
     return render(request, 'home.html', konteks)
 
+def Galeri(request) :
+    title = "Galeri"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'galeri.html', konteks)
+
 def fatwaTausiyah(request) :
     title = "Fatwa & Tausiyah"
     konteks = {
@@ -32,8 +39,41 @@ def fatwaTausiyah(request) :
     }
     return render(request, 'fatwa_tausiyah.html', konteks)
 
+def sejarah(request) :
+    title = "sejarah"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'sejarah.html', konteks)
+
+def kosultasi(request) :
+    title = "Konsultasi"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'konsultasi.html', konteks)
+
+def berita(request) :
+    title = "Berita"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'berita.html', konteks)
+
+def detail(request) :
+    title = "Detail Berita"
+    konteks = {
+        'title': title,
+    }
+    return render(request, 'detail_berita.html', konteks)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    path('galeri', Galeri),
     path('fatwa-tausiyah', fatwaTausiyah),
+    path('sejarah', sejarah),
+    path('konsultasi', kosultasi),
+    path('berita',berita),
+    path('detail',detail),
 ]
